@@ -152,7 +152,7 @@ namespace InitiativeTracker
                 var list = MainForm.InitiativeList.ToList();
 
                 MainForm.ResultList.Clear();
-                list.Sort();
+                list.Sort((a, b) => -1 * a.CompareTo(b));
 
                 foreach (var item in list)
                 {
