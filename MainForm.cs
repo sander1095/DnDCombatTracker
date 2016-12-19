@@ -50,7 +50,6 @@ namespace InitiativeTracker
             InitiativeList.Remove((Character)Initiative_List.SelectedItem);
 
             //Update the ResultList
-            //Update the ResultList
             var list = InitiativeList.ToList();
 
             ResultList.Clear();
