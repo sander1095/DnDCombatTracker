@@ -39,7 +39,7 @@ namespace InitiativeTracker
             if (AddForm.Character.TempHP < 0)
             {
                 //The tempHP has now been drained, actual HP should be damaged
-                dmg = 0 - AddForm.Character.TempHP;
+                dmg = 0 - AddForm.Character.TempHP.Value;
                 AddForm.Character.TempHP = 0;
 
                 AddForm.Character.HP -= dmg;
@@ -52,7 +52,7 @@ namespace InitiativeTracker
                 }
             }
 
-            form.UpdateScreen(AddForm.Character.HP, AddForm.Character.TempHP);
+            form.UpdateScreen(AddForm.Character.HP.Value, AddForm.Character.TempHP.Value);
             this.Close();
         }
     }
