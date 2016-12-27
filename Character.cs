@@ -29,41 +29,40 @@ namespace InitiativeTracker
     {
         public string Name { get; set; }
 
-        public int Initiative { get; set; }
+        public short Initiative { get; set; }
 
-        public int? MaxHP { get; set; }
+        public short? MaxHP { get; set; }
 
-        public int? HP { get; set; }
+        public short? HP { get; set; }
 
-        public int? TempHP { get; set; }
+        public short? TempHP { get; set; }
 
-        public int DeathSaves_Fail { get; set; }
+        public short DeathSaves_Fail { get; set; }
 
-        public int DeathSaves_Success { get; set; }
+        public short DeathSaves_Success { get; set; }
 
         public List<Conditions> Conditions { get; set; }
 
-        public Character(string name, int dex, int maxHP, int HP, int tempHP, int fail, int success, List<Conditions> conditions)
+        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions)
         {
             Name = name;
-            Initiative = dex;
+            Initiative = initiative;
             MaxHP = maxHP;
             this.HP = HP;
             TempHP = tempHP;
             DeathSaves_Fail = fail;
             DeathSaves_Success = success;
             Conditions = conditions;
-
-        }
-
-        public Character()
-        {
-
         }
 
         public override string ToString()
         {
-            return $"({Initiative})\t{Name}\tHP:{HP}\tTemp HP:{TempHP}";
+            //Determine if the HP part should be shown or not:
+            if (HP.HasValue)
+            {
+                return $"({Initiative})\t{Name}\tHP:{HP}";
+            }
+            return $"({Initiative})\t{Name}";
         }
 
         public int CompareTo(Character other)

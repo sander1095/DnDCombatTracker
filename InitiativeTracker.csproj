@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,24 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForm.Designer.cs">
-      <DependentUpon>AddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DamageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DamageForm.Designer.cs">
-      <DependentUpon>DamageForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="OverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,15 +87,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForm.resx">
-      <DependentUpon>AddForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DamageForm.resx">
-      <DependentUpon>DamageForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OverviewForm.resx">
       <DependentUpon>OverviewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,12 +124,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\save-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\save-icon - kopie.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

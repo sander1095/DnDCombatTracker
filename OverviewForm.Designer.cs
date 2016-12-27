@@ -62,7 +62,7 @@
             this.SuccessListLabel = new System.Windows.Forms.Label();
             this.InfoListGroupBox = new System.Windows.Forms.GroupBox();
             this.NameListLabel = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TempHPInput = new System.Windows.Forms.TextBox();
             this.NameInput = new System.Windows.Forms.TextBox();
             this.HPDivideListLabel = new System.Windows.Forms.Label();
             this.MaxHPInput = new System.Windows.Forms.TextBox();
@@ -85,12 +85,12 @@
             this.NextNamePlaceholderLabel = new System.Windows.Forms.Label();
             this.DetailSeperatorLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.Fail2DetailCheckbox = new System.Windows.Forms.CheckBox();
+            this.Fail3DetailCheckbox = new System.Windows.Forms.CheckBox();
+            this.Fail1DetailCheckbox = new System.Windows.Forms.CheckBox();
+            this.Success2DetailCheckbox = new System.Windows.Forms.CheckBox();
+            this.Success3DetailCheckbox = new System.Windows.Forms.CheckBox();
+            this.Success1DetailCheckbox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ConditionsDetailGroupBox = new System.Windows.Forms.GroupBox();
@@ -145,7 +145,7 @@
             this.NextButton.Location = new System.Drawing.Point(306, 317);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 190);
-            this.NextButton.TabIndex = 2;
+            this.NextButton.TabIndex = 30;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
@@ -392,7 +392,7 @@
             // Fail1ListCheckbox
             // 
             this.Fail1ListCheckbox.AutoSize = true;
-            this.Fail1ListCheckbox.Location = new System.Drawing.Point(87, 50);
+            this.Fail1ListCheckbox.Location = new System.Drawing.Point(84, 50);
             this.Fail1ListCheckbox.Name = "Fail1ListCheckbox";
             this.Fail1ListCheckbox.Size = new System.Drawing.Size(15, 14);
             this.Fail1ListCheckbox.TabIndex = 10;
@@ -419,7 +419,7 @@
             // Success1ListCheckbox
             // 
             this.Success1ListCheckbox.AutoSize = true;
-            this.Success1ListCheckbox.Location = new System.Drawing.Point(87, 30);
+            this.Success1ListCheckbox.Location = new System.Drawing.Point(84, 30);
             this.Success1ListCheckbox.Name = "Success1ListCheckbox";
             this.Success1ListCheckbox.Size = new System.Drawing.Size(15, 14);
             this.Success1ListCheckbox.TabIndex = 7;
@@ -448,7 +448,7 @@
             // InfoListGroupBox
             // 
             this.InfoListGroupBox.Controls.Add(this.NameListLabel);
-            this.InfoListGroupBox.Controls.Add(this.textBox5);
+            this.InfoListGroupBox.Controls.Add(this.TempHPInput);
             this.InfoListGroupBox.Controls.Add(this.NameInput);
             this.InfoListGroupBox.Controls.Add(this.HPDivideListLabel);
             this.InfoListGroupBox.Controls.Add(this.MaxHPInput);
@@ -469,19 +469,20 @@
             // 
             this.NameListLabel.AutoSize = true;
             this.NameListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameListLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NameListLabel.Location = new System.Drawing.Point(6, 20);
             this.NameListLabel.Name = "NameListLabel";
             this.NameListLabel.Size = new System.Drawing.Size(58, 18);
             this.NameListLabel.TabIndex = 4;
             this.NameListLabel.Text = "Name:*";
             // 
-            // textBox5
+            // TempHPInput
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(105, 98);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(26, 21);
-            this.textBox5.TabIndex = 6;
+            this.TempHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempHPInput.Location = new System.Drawing.Point(105, 98);
+            this.TempHPInput.Name = "TempHPInput";
+            this.TempHPInput.Size = new System.Drawing.Size(26, 21);
+            this.TempHPInput.TabIndex = 6;
             // 
             // NameInput
             // 
@@ -513,6 +514,7 @@
             // 
             this.InitiativeListLabel.AutoSize = true;
             this.InitiativeListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InitiativeListLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.InitiativeListLabel.Location = new System.Drawing.Point(6, 46);
             this.InitiativeListLabel.Name = "InitiativeListLabel";
             this.InitiativeListLabel.Size = new System.Drawing.Size(69, 18);
@@ -606,9 +608,8 @@
             this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(186, 107);
             this.NextMaxHPPlaceholderLabel.Name = "NextMaxHPPlaceholderLabel";
-            this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextMaxHPPlaceholderLabel.TabIndex = 35;
-            this.NextMaxHPPlaceholderLabel.Text = "56";
             // 
             // NameNextDetailLabel
             // 
@@ -646,9 +647,8 @@
             this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(138, 142);
             this.NextTempHPPlaceholderLabel.Name = "NextTempHPPlaceholderLabel";
-            this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(16, 18);
+            this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextTempHPPlaceholderLabel.TabIndex = 33;
-            this.NextTempHPPlaceholderLabel.Text = "0";
             // 
             // HPNextDetailLabel
             // 
@@ -666,9 +666,8 @@
             this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(138, 107);
             this.NextHPPlaceholderLabel.Name = "NextHPPlaceholderLabel";
-            this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextHPPlaceholderLabel.TabIndex = 32;
-            this.NextHPPlaceholderLabel.Text = "23";
             // 
             // TempHPNextDetailLabel
             // 
@@ -686,9 +685,8 @@
             this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(138, 73);
             this.NextInitiativePlaceholderLabel.Name = "NextInitiativePlaceholderLabel";
-            this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextInitiativePlaceholderLabel.TabIndex = 31;
-            this.NextInitiativePlaceholderLabel.Text = "14";
             // 
             // NextNamePlaceholderLabel
             // 
@@ -696,9 +694,8 @@
             this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(138, 39);
             this.NextNamePlaceholderLabel.Name = "NextNamePlaceholderLabel";
-            this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(129, 18);
+            this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextNamePlaceholderLabel.TabIndex = 30;
-            this.NextNamePlaceholderLabel.Text = "Example Surname";
             // 
             // DetailSeperatorLabel
             // 
@@ -713,12 +710,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox6);
+            this.groupBox1.Controls.Add(this.Fail2DetailCheckbox);
+            this.groupBox1.Controls.Add(this.Fail3DetailCheckbox);
+            this.groupBox1.Controls.Add(this.Fail1DetailCheckbox);
+            this.groupBox1.Controls.Add(this.Success2DetailCheckbox);
+            this.groupBox1.Controls.Add(this.Success3DetailCheckbox);
+            this.groupBox1.Controls.Add(this.Success1DetailCheckbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -729,60 +726,65 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Death Saves";
             // 
-            // checkBox1
+            // Fail2DetailCheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(109, 50);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Fail2DetailCheckbox.AutoSize = true;
+            this.Fail2DetailCheckbox.Enabled = false;
+            this.Fail2DetailCheckbox.Location = new System.Drawing.Point(109, 50);
+            this.Fail2DetailCheckbox.Name = "Fail2DetailCheckbox";
+            this.Fail2DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Fail2DetailCheckbox.TabIndex = 7;
+            this.Fail2DetailCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // Fail3DetailCheckbox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(134, 50);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Fail3DetailCheckbox.AutoSize = true;
+            this.Fail3DetailCheckbox.Enabled = false;
+            this.Fail3DetailCheckbox.Location = new System.Drawing.Point(134, 50);
+            this.Fail3DetailCheckbox.Name = "Fail3DetailCheckbox";
+            this.Fail3DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Fail3DetailCheckbox.TabIndex = 6;
+            this.Fail3DetailCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // Fail1DetailCheckbox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(87, 50);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 5;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Fail1DetailCheckbox.AutoSize = true;
+            this.Fail1DetailCheckbox.Enabled = false;
+            this.Fail1DetailCheckbox.Location = new System.Drawing.Point(87, 50);
+            this.Fail1DetailCheckbox.Name = "Fail1DetailCheckbox";
+            this.Fail1DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Fail1DetailCheckbox.TabIndex = 5;
+            this.Fail1DetailCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // Success2DetailCheckbox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(109, 30);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.Success2DetailCheckbox.AutoSize = true;
+            this.Success2DetailCheckbox.Enabled = false;
+            this.Success2DetailCheckbox.Location = new System.Drawing.Point(109, 30);
+            this.Success2DetailCheckbox.Name = "Success2DetailCheckbox";
+            this.Success2DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Success2DetailCheckbox.TabIndex = 4;
+            this.Success2DetailCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // Success3DetailCheckbox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(134, 30);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 3;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.Success3DetailCheckbox.AutoSize = true;
+            this.Success3DetailCheckbox.Enabled = false;
+            this.Success3DetailCheckbox.Location = new System.Drawing.Point(134, 30);
+            this.Success3DetailCheckbox.Name = "Success3DetailCheckbox";
+            this.Success3DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Success3DetailCheckbox.TabIndex = 3;
+            this.Success3DetailCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // Success1DetailCheckbox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Enabled = false;
-            this.checkBox6.Location = new System.Drawing.Point(87, 30);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.Success1DetailCheckbox.AutoSize = true;
+            this.Success1DetailCheckbox.Enabled = false;
+            this.Success1DetailCheckbox.Location = new System.Drawing.Point(87, 30);
+            this.Success1DetailCheckbox.Name = "Success1DetailCheckbox";
+            this.Success1DetailCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.Success1DetailCheckbox.TabIndex = 2;
+            this.Success1DetailCheckbox.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -819,11 +821,6 @@
             this.ConditionsPlaceholderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionsPlaceholderList.FormattingEnabled = true;
             this.ConditionsPlaceholderList.ItemHeight = 15;
-            this.ConditionsPlaceholderList.Items.AddRange(new object[] {
-            "Blinded",
-            "Deafened",
-            "Grappled",
-            "Poisoned"});
             this.ConditionsPlaceholderList.Location = new System.Drawing.Point(6, 22);
             this.ConditionsPlaceholderList.Name = "ConditionsPlaceholderList";
             this.ConditionsPlaceholderList.SelectionMode = System.Windows.Forms.SelectionMode.None;
@@ -836,9 +833,8 @@
             this.MaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaxHPPlaceholderLabel.Location = new System.Drawing.Point(174, 106);
             this.MaxHPPlaceholderLabel.Name = "MaxHPPlaceholderLabel";
-            this.MaxHPPlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.MaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.MaxHPPlaceholderLabel.TabIndex = 23;
-            this.MaxHPPlaceholderLabel.Text = "56";
             // 
             // HPDividerDetailLabel
             // 
@@ -856,9 +852,8 @@
             this.TempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPPlaceholderLabel.Location = new System.Drawing.Point(126, 141);
             this.TempHPPlaceholderLabel.Name = "TempHPPlaceholderLabel";
-            this.TempHPPlaceholderLabel.Size = new System.Drawing.Size(16, 18);
+            this.TempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.TempHPPlaceholderLabel.TabIndex = 21;
-            this.TempHPPlaceholderLabel.Text = "0";
             // 
             // HPPlaceholderLabel
             // 
@@ -866,9 +861,8 @@
             this.HPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPPlaceholderLabel.Location = new System.Drawing.Point(126, 106);
             this.HPPlaceholderLabel.Name = "HPPlaceholderLabel";
-            this.HPPlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.HPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.HPPlaceholderLabel.TabIndex = 20;
-            this.HPPlaceholderLabel.Text = "23";
             // 
             // InitiativePlaceholderLabel
             // 
@@ -876,9 +870,8 @@
             this.InitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativePlaceholderLabel.Location = new System.Drawing.Point(126, 72);
             this.InitiativePlaceholderLabel.Name = "InitiativePlaceholderLabel";
-            this.InitiativePlaceholderLabel.Size = new System.Drawing.Size(24, 18);
+            this.InitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.InitiativePlaceholderLabel.TabIndex = 19;
-            this.InitiativePlaceholderLabel.Text = "14";
             // 
             // NamePlaceholderLabel
             // 
@@ -886,9 +879,8 @@
             this.NamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NamePlaceholderLabel.Location = new System.Drawing.Point(126, 38);
             this.NamePlaceholderLabel.Name = "NamePlaceholderLabel";
-            this.NamePlaceholderLabel.Size = new System.Drawing.Size(122, 18);
+            this.NamePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NamePlaceholderLabel.TabIndex = 18;
-            this.NamePlaceholderLabel.Text = "Thorinn Surname";
             // 
             // TempHPDetailLabel
             // 
@@ -998,7 +990,7 @@
         private System.Windows.Forms.Label HPDivideListLabel;
         private System.Windows.Forms.GroupBox DeathSavesListGroupBox;
         private System.Windows.Forms.TextBox NameInput;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TempHPInput;
         private System.Windows.Forms.TextBox MaxHPInput;
         private System.Windows.Forms.TextBox HPInput;
         private System.Windows.Forms.TextBox InitiativeInput;
@@ -1042,12 +1034,12 @@
         private System.Windows.Forms.GroupBox ConditionsDetailGroupBox;
         private System.Windows.Forms.ListBox ConditionsPlaceholderList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox Fail2DetailCheckbox;
+        private System.Windows.Forms.CheckBox Fail3DetailCheckbox;
+        private System.Windows.Forms.CheckBox Fail1DetailCheckbox;
+        private System.Windows.Forms.CheckBox Success2DetailCheckbox;
+        private System.Windows.Forms.CheckBox Success3DetailCheckbox;
+        private System.Windows.Forms.CheckBox Success1DetailCheckbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label DetailSeperatorLabel;
