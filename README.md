@@ -1,6 +1,8 @@
 # D&D 5e Combat Tracker
 A D&amp;D 5e Combat Tracker made using Windows Forms
 
+##Download
+The newest version can be downloaded from the [Releases] (https://github.com/sander1095/DnDCombatTracker/releases/latest/) Tab.
 
 ##What does it do?
 This program allows you to track your combat in Dungeons and Dragons 5e. It is created for fellow DM's so you can speed up your combat and not make your players wait a couple minutes before you are finally ready to begin. 
@@ -29,6 +31,8 @@ Right now the code is quite ugly. I created this project for fun and for some fr
   * I prefer rolling things like stats and initiative with real dice, but if you want to speed up the process of combat, it'd be nice to be able to click on a button which would roll the initiative for you.
 * Keyboard shortcuts
   * Allow the user to set keybinds so he can perform actions such as editing specific fields or pressing the "Next" button with just a press of a button on the keyboard.
+* Updater
+  * Notify the user when a new release is published to this repo.
   
 All other upcoming features/bugfixes can be seen in the [Issues](https://github.com/sander1095/DnDCombatTracker/issues) Tab
 
