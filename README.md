@@ -16,14 +16,10 @@ You are able to see the current character's details and also who's up next. This
 
 ##Roadmap
 
-Right now the code is quite ugly. I created this project for fun and for some friends. I want to improve the code and add the following features:
+Right now the code is quite ugly. I created this project for fun and for some friends. I want to improve the code and add the **major** following features:
 
 * Save/Import/Export characters
   * This would be useful if you, for example, want to save your PC's and use them again on a later date. If you load this program on a different computer then you would just be able to import a certain file and all the characters would be loaded instantly. You could also create characters like a Goblin so you can easily add those to the Tracker.
-* Use WPF or a better "pattern" in WinForms so the code would be a lot better.
-  * Right now the code is a mess, and it needs a lot of improvement. A pattern like MVC, MVVM or something like that would improve the codebase a lot.
-* Create a manual for this software.
-  * I could maybe use the wiki or create a PDF about how to use this program so it would be more user friendly
 * Allow users to prioritize characters with the same initiative
 * Allow the user to change character names
   * Right now, if you create a character and want to change its name, a new character will be added with that name. Being able to change the name would be a nice feature.
@@ -33,6 +29,13 @@ Right now the code is quite ugly. I created this project for fun and for some fr
   * Allow the user to set keybinds so he can perform actions such as editing specific fields or pressing the "Next" button with just a press of a button on the keyboard.
 * Updater
   * Notify the user when a new release is published to this repo.
+  
+  
+* Create a manual for this software.
+  * I could maybe use the Github Wiki or create a PDF about how to use this program so it would be more user friendly
+
+* Use WPF or a better "pattern" in WinForms so the code would be a lot better.
+  * Right now the code is a mess, and it needs a lot of improvement. A pattern like MVC, MVVM or something like that would improve the codebase a lot.
   
 All other upcoming features/bugfixes can be seen in the [Issues](https://github.com/sander1095/DnDCombatTracker/issues) Tab
 
