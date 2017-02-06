@@ -12,7 +12,7 @@ You can add/modify/delete characters/monsters that are in combat, set their name
 You are able to see the current character's details and also who's up next. This is useful because you can tell the upcoming player (If the upcoming character is a PC, of course) that his/her turn is after the current one and thus the character can start preparing.
 
 ##What does it look like?
-*Images will be added soon.*
+![Image of the application](Images/Overview.png?raw=true "Image of the application")
 
 ##Roadmap
 
