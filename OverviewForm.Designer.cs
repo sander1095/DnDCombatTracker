@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OverviewForm));
             this.SaveButton = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DeleteButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.InitiativeList = new System.Windows.Forms.ListBox();
@@ -105,6 +107,7 @@
             this.NameDetailLabel = new System.Windows.Forms.Label();
             this.ReduceHPLabel = new System.Windows.Forms.Label();
             this.ReduceHPInput = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.ItemsGroupBox.SuspendLayout();
             this.ConditionsListGroupbox.SuspendLayout();
             this.DeathSavesListGroupBox.SuspendLayout();
@@ -149,7 +152,7 @@
             // 
             // InitiativeList
             // 
-            this.InitiativeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.InitiativeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeList.FormattingEnabled = true;
             this.InitiativeList.ItemHeight = 15;
             this.InitiativeList.Location = new System.Drawing.Point(6, 19);
@@ -164,7 +167,7 @@
             this.ItemsGroupBox.Controls.Add(this.DeathSavesListGroupBox);
             this.ItemsGroupBox.Controls.Add(this.InitiativeList);
             this.ItemsGroupBox.Controls.Add(this.InfoListGroupBox);
-            this.ItemsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ItemsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemsGroupBox.Location = new System.Drawing.Point(12, 12);
             this.ItemsGroupBox.Name = "ItemsGroupBox";
             this.ItemsGroupBox.Size = new System.Drawing.Size(371, 512);
@@ -188,7 +191,7 @@
             this.ConditionsListGroupbox.Controls.Add(this.DeafenedCheckbox);
             this.ConditionsListGroupbox.Controls.Add(this.CharmedCheckbox);
             this.ConditionsListGroupbox.Controls.Add(this.BlindedCheckbox);
-            this.ConditionsListGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ConditionsListGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionsListGroupbox.Location = new System.Drawing.Point(6, 396);
             this.ConditionsListGroupbox.Name = "ConditionsListGroupbox";
             this.ConditionsListGroupbox.Size = new System.Drawing.Size(357, 105);
@@ -199,7 +202,7 @@
             // UnconsciousCheckbox
             // 
             this.UnconsciousCheckbox.AutoSize = true;
-            this.UnconsciousCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.UnconsciousCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UnconsciousCheckbox.Location = new System.Drawing.Point(273, 39);
             this.UnconsciousCheckbox.Name = "UnconsciousCheckbox";
             this.UnconsciousCheckbox.Size = new System.Drawing.Size(88, 17);
@@ -210,7 +213,7 @@
             // StunnedCheckbox
             // 
             this.StunnedCheckbox.AutoSize = true;
-            this.StunnedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StunnedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StunnedCheckbox.Location = new System.Drawing.Point(273, 21);
             this.StunnedCheckbox.Name = "StunnedCheckbox";
             this.StunnedCheckbox.Size = new System.Drawing.Size(66, 17);
@@ -221,7 +224,7 @@
             // RestrainedCheckbox
             // 
             this.RestrainedCheckbox.AutoSize = true;
-            this.RestrainedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.RestrainedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RestrainedCheckbox.Location = new System.Drawing.Point(181, 75);
             this.RestrainedCheckbox.Name = "RestrainedCheckbox";
             this.RestrainedCheckbox.Size = new System.Drawing.Size(77, 17);
@@ -232,7 +235,7 @@
             // ProneCheckbox
             // 
             this.ProneCheckbox.AutoSize = true;
-            this.ProneCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ProneCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProneCheckbox.Location = new System.Drawing.Point(181, 57);
             this.ProneCheckbox.Name = "ProneCheckbox";
             this.ProneCheckbox.Size = new System.Drawing.Size(54, 17);
@@ -243,7 +246,7 @@
             // PoisonedCheckbox
             // 
             this.PoisonedCheckbox.AutoSize = true;
-            this.PoisonedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PoisonedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PoisonedCheckbox.Location = new System.Drawing.Point(181, 39);
             this.PoisonedCheckbox.Name = "PoisonedCheckbox";
             this.PoisonedCheckbox.Size = new System.Drawing.Size(70, 17);
@@ -254,7 +257,7 @@
             // PetrifiedCheckbox
             // 
             this.PetrifiedCheckbox.AutoSize = true;
-            this.PetrifiedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PetrifiedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetrifiedCheckbox.Location = new System.Drawing.Point(181, 21);
             this.PetrifiedCheckbox.Name = "PetrifiedCheckbox";
             this.PetrifiedCheckbox.Size = new System.Drawing.Size(64, 17);
@@ -265,7 +268,7 @@
             // ParalyzedCheckbox
             // 
             this.ParalyzedCheckbox.AutoSize = true;
-            this.ParalyzedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ParalyzedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ParalyzedCheckbox.Location = new System.Drawing.Point(95, 75);
             this.ParalyzedCheckbox.Name = "ParalyzedCheckbox";
             this.ParalyzedCheckbox.Size = new System.Drawing.Size(72, 17);
@@ -276,7 +279,7 @@
             // InvisibleCheckbox
             // 
             this.InvisibleCheckbox.AutoSize = true;
-            this.InvisibleCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.InvisibleCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InvisibleCheckbox.Location = new System.Drawing.Point(95, 57);
             this.InvisibleCheckbox.Name = "InvisibleCheckbox";
             this.InvisibleCheckbox.Size = new System.Drawing.Size(64, 17);
@@ -287,7 +290,7 @@
             // IncapacitatedCheckbox
             // 
             this.IncapacitatedCheckbox.AutoSize = true;
-            this.IncapacitatedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.IncapacitatedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IncapacitatedCheckbox.Location = new System.Drawing.Point(95, 39);
             this.IncapacitatedCheckbox.Name = "IncapacitatedCheckbox";
             this.IncapacitatedCheckbox.Size = new System.Drawing.Size(91, 17);
@@ -298,7 +301,7 @@
             // GrappledCheckbox
             // 
             this.GrappledCheckbox.AutoSize = true;
-            this.GrappledCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.GrappledCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrappledCheckbox.Location = new System.Drawing.Point(95, 21);
             this.GrappledCheckbox.Name = "GrappledCheckbox";
             this.GrappledCheckbox.Size = new System.Drawing.Size(69, 17);
@@ -309,7 +312,7 @@
             // FrightenedCheckbox
             // 
             this.FrightenedCheckbox.AutoSize = true;
-            this.FrightenedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.FrightenedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrightenedCheckbox.Location = new System.Drawing.Point(10, 75);
             this.FrightenedCheckbox.Name = "FrightenedCheckbox";
             this.FrightenedCheckbox.Size = new System.Drawing.Size(76, 17);
@@ -320,7 +323,7 @@
             // DeafenedCheckbox
             // 
             this.DeafenedCheckbox.AutoSize = true;
-            this.DeafenedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.DeafenedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeafenedCheckbox.Location = new System.Drawing.Point(10, 57);
             this.DeafenedCheckbox.Name = "DeafenedCheckbox";
             this.DeafenedCheckbox.Size = new System.Drawing.Size(73, 17);
@@ -331,7 +334,7 @@
             // CharmedCheckbox
             // 
             this.CharmedCheckbox.AutoSize = true;
-            this.CharmedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CharmedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharmedCheckbox.Location = new System.Drawing.Point(10, 39);
             this.CharmedCheckbox.Name = "CharmedCheckbox";
             this.CharmedCheckbox.Size = new System.Drawing.Size(68, 17);
@@ -342,7 +345,7 @@
             // BlindedCheckbox
             // 
             this.BlindedCheckbox.AutoSize = true;
-            this.BlindedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.BlindedCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BlindedCheckbox.Location = new System.Drawing.Point(10, 21);
             this.BlindedCheckbox.Name = "BlindedCheckbox";
             this.BlindedCheckbox.Size = new System.Drawing.Size(61, 17);
@@ -360,7 +363,7 @@
             this.DeathSavesListGroupBox.Controls.Add(this.Success1ListCheckbox);
             this.DeathSavesListGroupBox.Controls.Add(this.FailListLabel);
             this.DeathSavesListGroupBox.Controls.Add(this.SuccessListLabel);
-            this.DeathSavesListGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.DeathSavesListGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeathSavesListGroupBox.Location = new System.Drawing.Point(6, 317);
             this.DeathSavesListGroupBox.Name = "DeathSavesListGroupBox";
             this.DeathSavesListGroupBox.Size = new System.Drawing.Size(186, 73);
@@ -425,7 +428,7 @@
             // FailListLabel
             // 
             this.FailListLabel.AutoSize = true;
-            this.FailListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.FailListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FailListLabel.Location = new System.Drawing.Point(7, 48);
             this.FailListLabel.Name = "FailListLabel";
             this.FailListLabel.Size = new System.Drawing.Size(35, 18);
@@ -435,7 +438,7 @@
             // SuccessListLabel
             // 
             this.SuccessListLabel.AutoSize = true;
-            this.SuccessListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.SuccessListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuccessListLabel.Location = new System.Drawing.Point(6, 26);
             this.SuccessListLabel.Name = "SuccessListLabel";
             this.SuccessListLabel.Size = new System.Drawing.Size(70, 18);
@@ -454,7 +457,7 @@
             this.InfoListGroupBox.Controls.Add(this.HPInput);
             this.InfoListGroupBox.Controls.Add(this.TempHPListLabel);
             this.InfoListGroupBox.Controls.Add(this.InitiativeInput);
-            this.InfoListGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.InfoListGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoListGroupBox.Location = new System.Drawing.Point(6, 191);
             this.InfoListGroupBox.Name = "InfoListGroupBox";
             this.InfoListGroupBox.Size = new System.Drawing.Size(361, 316);
@@ -465,7 +468,7 @@
             // NameListLabel
             // 
             this.NameListLabel.AutoSize = true;
-            this.NameListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NameListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameListLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NameListLabel.Location = new System.Drawing.Point(6, 20);
             this.NameListLabel.Name = "NameListLabel";
@@ -475,7 +478,7 @@
             // 
             // TempHPInput
             // 
-            this.TempHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.TempHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPInput.Location = new System.Drawing.Point(105, 98);
             this.TempHPInput.Name = "TempHPInput";
             this.TempHPInput.Size = new System.Drawing.Size(26, 21);
@@ -483,7 +486,7 @@
             // 
             // NameInput
             // 
-            this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameInput.Location = new System.Drawing.Point(105, 20);
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(100, 21);
@@ -492,7 +495,7 @@
             // HPDivideListLabel
             // 
             this.HPDivideListLabel.AutoSize = true;
-            this.HPDivideListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.HPDivideListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDivideListLabel.Location = new System.Drawing.Point(142, 72);
             this.HPDivideListLabel.Name = "HPDivideListLabel";
             this.HPDivideListLabel.Size = new System.Drawing.Size(12, 18);
@@ -501,7 +504,7 @@
             // 
             // MaxHPInput
             // 
-            this.MaxHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.MaxHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaxHPInput.Location = new System.Drawing.Point(160, 72);
             this.MaxHPInput.Name = "MaxHPInput";
             this.MaxHPInput.Size = new System.Drawing.Size(26, 21);
@@ -510,7 +513,7 @@
             // InitiativeListLabel
             // 
             this.InitiativeListLabel.AutoSize = true;
-            this.InitiativeListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.InitiativeListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeListLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.InitiativeListLabel.Location = new System.Drawing.Point(6, 46);
             this.InitiativeListLabel.Name = "InitiativeListLabel";
@@ -521,7 +524,7 @@
             // HPMaxHPListLabel
             // 
             this.HPMaxHPListLabel.AutoSize = true;
-            this.HPMaxHPListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.HPMaxHPListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPMaxHPListLabel.Location = new System.Drawing.Point(6, 72);
             this.HPMaxHPListLabel.Name = "HPMaxHPListLabel";
             this.HPMaxHPListLabel.Size = new System.Drawing.Size(98, 18);
@@ -530,7 +533,7 @@
             // 
             // HPInput
             // 
-            this.HPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.HPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPInput.Location = new System.Drawing.Point(105, 72);
             this.HPInput.Name = "HPInput";
             this.HPInput.Size = new System.Drawing.Size(26, 21);
@@ -539,7 +542,7 @@
             // TempHPListLabel
             // 
             this.TempHPListLabel.AutoSize = true;
-            this.TempHPListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.TempHPListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPListLabel.Location = new System.Drawing.Point(6, 98);
             this.TempHPListLabel.Name = "TempHPListLabel";
             this.TempHPListLabel.Size = new System.Drawing.Size(75, 18);
@@ -548,7 +551,7 @@
             // 
             // InitiativeInput
             // 
-            this.InitiativeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.InitiativeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeInput.Location = new System.Drawing.Point(105, 46);
             this.InitiativeInput.Name = "InitiativeInput";
             this.InitiativeInput.Size = new System.Drawing.Size(26, 21);
@@ -571,7 +574,7 @@
             this.DetailsGroupBox.Controls.Add(this.HPDetailLabel);
             this.DetailsGroupBox.Controls.Add(this.InitiativeDetailLabel);
             this.DetailsGroupBox.Controls.Add(this.NameDetailLabel);
-            this.DetailsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.DetailsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailsGroupBox.Location = new System.Drawing.Point(389, 12);
             this.DetailsGroupBox.Name = "DetailsGroupBox";
             this.DetailsGroupBox.Size = new System.Drawing.Size(393, 512);
@@ -591,7 +594,7 @@
             this.groupBox2.Controls.Add(this.TempHPNextDetailLabel);
             this.groupBox2.Controls.Add(this.NextInitiativePlaceholderLabel);
             this.groupBox2.Controls.Add(this.NextNamePlaceholderLabel);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(11, 308);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(289, 199);
@@ -602,7 +605,7 @@
             // NextMaxHPPlaceholderLabel
             // 
             this.NextMaxHPPlaceholderLabel.AutoSize = true;
-            this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(186, 107);
             this.NextMaxHPPlaceholderLabel.Name = "NextMaxHPPlaceholderLabel";
             this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -611,7 +614,7 @@
             // NameNextDetailLabel
             // 
             this.NameNextDetailLabel.AutoSize = true;
-            this.NameNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.NameNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameNextDetailLabel.Location = new System.Drawing.Point(18, 35);
             this.NameNextDetailLabel.Name = "NameNextDetailLabel";
             this.NameNextDetailLabel.Size = new System.Drawing.Size(74, 25);
@@ -621,7 +624,7 @@
             // HPDividerNextDetailLabel
             // 
             this.HPDividerNextDetailLabel.AutoSize = true;
-            this.HPDividerNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.HPDividerNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDividerNextDetailLabel.Location = new System.Drawing.Point(168, 107);
             this.HPDividerNextDetailLabel.Name = "HPDividerNextDetailLabel";
             this.HPDividerNextDetailLabel.Size = new System.Drawing.Size(12, 18);
@@ -631,7 +634,7 @@
             // InitiativeNextDetailLabel
             // 
             this.InitiativeNextDetailLabel.AutoSize = true;
-            this.InitiativeNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.InitiativeNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeNextDetailLabel.Location = new System.Drawing.Point(18, 69);
             this.InitiativeNextDetailLabel.Name = "InitiativeNextDetailLabel";
             this.InitiativeNextDetailLabel.Size = new System.Drawing.Size(97, 25);
@@ -641,7 +644,7 @@
             // NextTempHPPlaceholderLabel
             // 
             this.NextTempHPPlaceholderLabel.AutoSize = true;
-            this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(138, 142);
             this.NextTempHPPlaceholderLabel.Name = "NextTempHPPlaceholderLabel";
             this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -650,7 +653,7 @@
             // HPNextDetailLabel
             // 
             this.HPNextDetailLabel.AutoSize = true;
-            this.HPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.HPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPNextDetailLabel.Location = new System.Drawing.Point(18, 103);
             this.HPNextDetailLabel.Name = "HPNextDetailLabel";
             this.HPNextDetailLabel.Size = new System.Drawing.Size(47, 25);
@@ -660,7 +663,7 @@
             // NextHPPlaceholderLabel
             // 
             this.NextHPPlaceholderLabel.AutoSize = true;
-            this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(138, 107);
             this.NextHPPlaceholderLabel.Name = "NextHPPlaceholderLabel";
             this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -669,7 +672,7 @@
             // TempHPNextDetailLabel
             // 
             this.TempHPNextDetailLabel.AutoSize = true;
-            this.TempHPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.TempHPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPNextDetailLabel.Location = new System.Drawing.Point(18, 137);
             this.TempHPNextDetailLabel.Name = "TempHPNextDetailLabel";
             this.TempHPNextDetailLabel.Size = new System.Drawing.Size(107, 25);
@@ -679,7 +682,7 @@
             // NextInitiativePlaceholderLabel
             // 
             this.NextInitiativePlaceholderLabel.AutoSize = true;
-            this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(138, 73);
             this.NextInitiativePlaceholderLabel.Name = "NextInitiativePlaceholderLabel";
             this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -688,7 +691,7 @@
             // NextNamePlaceholderLabel
             // 
             this.NextNamePlaceholderLabel.AutoSize = true;
-            this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(138, 39);
             this.NextNamePlaceholderLabel.Name = "NextNamePlaceholderLabel";
             this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -697,7 +700,7 @@
             // DetailSeperatorLabel
             // 
             this.DetailSeperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DetailSeperatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.DetailSeperatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailSeperatorLabel.Location = new System.Drawing.Point(11, 292);
             this.DetailSeperatorLabel.MaximumSize = new System.Drawing.Size(0, 2);
             this.DetailSeperatorLabel.MinimumSize = new System.Drawing.Size(0, 2);
@@ -715,7 +718,7 @@
             this.groupBox1.Controls.Add(this.Success1DetailCheckbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(11, 208);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 73);
@@ -786,7 +789,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 18);
@@ -796,7 +799,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 18);
@@ -815,7 +818,7 @@
             // 
             // ConditionsPlaceholderList
             // 
-            this.ConditionsPlaceholderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.ConditionsPlaceholderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionsPlaceholderList.FormattingEnabled = true;
             this.ConditionsPlaceholderList.ItemHeight = 15;
             this.ConditionsPlaceholderList.Location = new System.Drawing.Point(6, 22);
@@ -827,7 +830,7 @@
             // MaxHPPlaceholderLabel
             // 
             this.MaxHPPlaceholderLabel.AutoSize = true;
-            this.MaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.MaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaxHPPlaceholderLabel.Location = new System.Drawing.Point(174, 106);
             this.MaxHPPlaceholderLabel.Name = "MaxHPPlaceholderLabel";
             this.MaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -836,7 +839,7 @@
             // HPDividerDetailLabel
             // 
             this.HPDividerDetailLabel.AutoSize = true;
-            this.HPDividerDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.HPDividerDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDividerDetailLabel.Location = new System.Drawing.Point(156, 106);
             this.HPDividerDetailLabel.Name = "HPDividerDetailLabel";
             this.HPDividerDetailLabel.Size = new System.Drawing.Size(12, 18);
@@ -846,7 +849,7 @@
             // TempHPPlaceholderLabel
             // 
             this.TempHPPlaceholderLabel.AutoSize = true;
-            this.TempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.TempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPPlaceholderLabel.Location = new System.Drawing.Point(126, 141);
             this.TempHPPlaceholderLabel.Name = "TempHPPlaceholderLabel";
             this.TempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -855,7 +858,7 @@
             // HPPlaceholderLabel
             // 
             this.HPPlaceholderLabel.AutoSize = true;
-            this.HPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.HPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPPlaceholderLabel.Location = new System.Drawing.Point(126, 106);
             this.HPPlaceholderLabel.Name = "HPPlaceholderLabel";
             this.HPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -864,7 +867,7 @@
             // InitiativePlaceholderLabel
             // 
             this.InitiativePlaceholderLabel.AutoSize = true;
-            this.InitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.InitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativePlaceholderLabel.Location = new System.Drawing.Point(126, 72);
             this.InitiativePlaceholderLabel.Name = "InitiativePlaceholderLabel";
             this.InitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -873,7 +876,7 @@
             // NamePlaceholderLabel
             // 
             this.NamePlaceholderLabel.AutoSize = true;
-            this.NamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.NamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NamePlaceholderLabel.Location = new System.Drawing.Point(126, 38);
             this.NamePlaceholderLabel.Name = "NamePlaceholderLabel";
             this.NamePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
@@ -882,7 +885,7 @@
             // TempHPDetailLabel
             // 
             this.TempHPDetailLabel.AutoSize = true;
-            this.TempHPDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.TempHPDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPDetailLabel.Location = new System.Drawing.Point(6, 136);
             this.TempHPDetailLabel.Name = "TempHPDetailLabel";
             this.TempHPDetailLabel.Size = new System.Drawing.Size(107, 25);
@@ -892,7 +895,7 @@
             // HPDetailLabel
             // 
             this.HPDetailLabel.AutoSize = true;
-            this.HPDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.HPDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDetailLabel.Location = new System.Drawing.Point(6, 102);
             this.HPDetailLabel.Name = "HPDetailLabel";
             this.HPDetailLabel.Size = new System.Drawing.Size(47, 25);
@@ -902,7 +905,7 @@
             // InitiativeDetailLabel
             // 
             this.InitiativeDetailLabel.AutoSize = true;
-            this.InitiativeDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.InitiativeDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeDetailLabel.Location = new System.Drawing.Point(6, 68);
             this.InitiativeDetailLabel.Name = "InitiativeDetailLabel";
             this.InitiativeDetailLabel.Size = new System.Drawing.Size(97, 25);
@@ -912,7 +915,7 @@
             // NameDetailLabel
             // 
             this.NameDetailLabel.AutoSize = true;
-            this.NameDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.NameDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameDetailLabel.Location = new System.Drawing.Point(6, 34);
             this.NameDetailLabel.Name = "NameDetailLabel";
             this.NameDetailLabel.Size = new System.Drawing.Size(74, 25);
@@ -922,7 +925,7 @@
             // ReduceHPLabel
             // 
             this.ReduceHPLabel.AutoSize = true;
-            this.ReduceHPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.ReduceHPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReduceHPLabel.Location = new System.Drawing.Point(209, 539);
             this.ReduceHPLabel.Name = "ReduceHPLabel";
             this.ReduceHPLabel.Size = new System.Drawing.Size(92, 18);
@@ -931,7 +934,7 @@
             // 
             // ReduceHPInput
             // 
-            this.ReduceHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.ReduceHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReduceHPInput.Location = new System.Drawing.Point(307, 538);
             this.ReduceHPInput.Name = "ReduceHPInput";
             this.ReduceHPInput.Size = new System.Drawing.Size(26, 21);
@@ -952,7 +955,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "OverviewForm";
-            this.Text = "Combat Tracker";
+            this.Text = "Initiative Tracker";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ItemsGroupBox.ResumeLayout(false);
             this.ConditionsListGroupbox.ResumeLayout(false);
             this.ConditionsListGroupbox.PerformLayout();
@@ -973,6 +977,7 @@
         }
 
         #endregion
+        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button NextButton;
