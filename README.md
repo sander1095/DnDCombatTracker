@@ -1,20 +1,22 @@
 # D&D 5e Combat Tracker
 A D&amp;D 5e Combat Tracker made using Windows Forms
 
-##Download
-The newest version can be downloaded from the [Releases] (https://github.com/sander1095/DnDCombatTracker/releases/latest/) Tab.
+## Download
+The newest version can be downloaded from the [Releases](https://github.com/sander1095/DnDCombatTracker/releases/latest/) Tab.
 
-##What does it do?
+## What does it do?
 This program allows you to track your combat in Dungeons and Dragons 5e. It is created for fellow DM's so you can speed up your combat and not make your players wait a couple minutes before you are finally ready to begin. 
 
 You can add/modify/delete characters/monsters that are in combat, set their name, initiative, HP/Max HP/Temp HP, conditions and death saving throws. You can use the "Reduce HP" input to automatically adjust the HP of a character so you don't have to do the math.
 
 You are able to see the current character's details and also who's up next. This is useful because you can tell the upcoming player (If the upcoming character is a PC, of course) that his/her turn is after the current one and thus the character can start preparing.
 
-##What does it look like?
+This software also includes an auto-updater! This means you will always be able to receive the newest releases.
+
+## What does it look like?
 ![Image of the application](Images/Overview.png?raw=true "Image of the application")
 
-##Roadmap
+## Roadmap
 
 Right now the code is quite ugly. I created this project for fun and for some friends. I want to improve the code and add the **major** following features:
 
@@ -27,25 +29,20 @@ Right now the code is quite ugly. I created this project for fun and for some fr
   * I prefer rolling things like stats and initiative with real dice, but if you want to speed up the process of combat, it'd be nice to be able to click on a button which would roll the initiative for you.
 * Keyboard shortcuts
   * Allow the user to set keybinds so he can perform actions such as editing specific fields or pressing the "Next" button with just a press of a button on the keyboard.
-* Updater
-  * Notify the user when a new release is published to this repo.
-  
-  
 * Create a manual for this software.
   * I could maybe use the Github Wiki or create a PDF about how to use this program so it would be more user friendly
-
 * Use WPF or a better "pattern" in WinForms so the code would be a lot better.
   * Right now the code is a mess, and it needs a lot of improvement. A pattern like MVC, MVVM or something like that would improve the codebase a lot.
   
 All other upcoming features/bugfixes can be seen in the [Issues](https://github.com/sander1095/DnDCombatTracker/issues) Tab
 
 
-##Contribute
+## Contribute
 If you want to contribute, make sure to create a pull request and tell me what you added/changed. Also, if you worked on an Issue, make sure to include that.
 
 If you spot a bug or something that doesn't work correctly, create an issue or find a way to contact me :)
 
-##License
+## License
 This project is licensed with the [MIT License](https://github.com/sander1095/DnDCombatTracker/blob/master/LICENSE)
 
 
