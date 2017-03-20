@@ -955,7 +955,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "OverviewForm";
-            this.Text = "D&D 5e Combat Tracker";
+            this.Text = "D&D 5e Combat Tracker (NEW. YOU ARE USING A WRONG VERSION!)";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ItemsGroupBox.ResumeLayout(false);
             this.ConditionsListGroupbox.ResumeLayout(false);
