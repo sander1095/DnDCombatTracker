@@ -13,7 +13,7 @@ namespace CombatTracker
         [STAThread]
         static void Main()
         {
-
+            /*
             //Create/Check save data
             var x = DataSaver.Instance;
 
@@ -47,9 +47,9 @@ namespace CombatTracker
 
 
             var listOfCategories = new List<Category>() { category_1, category_2, category_3, category_4 };
-
+            
             DataSaver.Instance.WriteToJsonFile(listOfCategories);
-
+            */
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
