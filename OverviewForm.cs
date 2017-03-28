@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CombatTracker.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -349,7 +350,7 @@ namespace CombatTracker
                 short fails = (short)ListDeathSavesFail.Count(x => x.Checked);
                 short successes = (short)ListDeathSavesSuccess.Count(x => x.Checked);
 
-                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions);
+                Character character = new Character(name, initiative, fails, successes, chosenConditions, maxHP, hp, tempHP);
 
                 //Update or insert the character
                 if (CharacterList.ToList().Exists(x => x.Name == name))

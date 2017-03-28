@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CombatTracker
+namespace CombatTracker.Models
 {
 
     public enum Conditions
@@ -40,7 +40,7 @@ namespace CombatTracker
 
         public List<Conditions> Conditions { get; set; }
 
-        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions)
+        public Character(string name, short initiative, short fail, short success, List<Conditions> conditions, short? maxHP, short? HP, short? tempHP)
         {
             Name = name;
             Initiative = initiative;
@@ -50,6 +50,11 @@ namespace CombatTracker
             DeathSaves_Fail = fail;
             DeathSaves_Success = success;
             Conditions = conditions;
+        }
+
+        public Character()
+        {
+
         }
 
         public override string ToString()
