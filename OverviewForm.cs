@@ -621,5 +621,33 @@ namespace CombatTracker
             short outValue;
             return short.TryParse(val, out outValue) ? (short?)outValue : null;
         }
+
+        private void About_Click(object sender, EventArgs e)
+        {
+            new AboutForm().Show();
+        }
+
+        private void Import_Click(object sender, EventArgs e)
+        {
+            //Show import screen, locate .JSON file, add it (Do error handling!). Ask if it should be merged or added as a new file. Merge it with the current list of characters, alphabatacially 
+            //if name of category/character already exists, error! Allow user to edit the name immediatly (with pop up) and resume merging
+
+            //Do the stuff that you noted down
+        }
+
+        private void Export_Click(object sender, EventArgs e)
+        {
+            //Open Windows Explorer to the folder where the .json files are saved?
+        }
+
+        private void Characters_Click(object sender, EventArgs e)
+        {
+            //maybe also offer the option to locate a different .json file and edit that? :)
+            //Default give the current list of characters on harddisk (DataSaver.GetCharacters() or something) as a parameter
+
+            //Do the stuff that you noted down
+
+            //Remember to check out the D&D monster API, maybe have a list of Default monsters
+        }
     }
 }

@@ -97,7 +97,7 @@ namespace CombatTracker
                 reader = new StreamReader(FILE_PATH);
                 var fileContents = reader.ReadToEnd();
                 var deserialized = JsonConvert.DeserializeObject<List<Category>>(fileContents);
-                return deserialized;
+                return deserialized; //TODO: Error handling! if file is wrong, tell user file is corrupt.
             }
             finally
             {

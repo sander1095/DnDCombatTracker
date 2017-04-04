@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OverviewForm));
             this.SaveButton = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DeleteButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.InitiativeList = new System.Windows.Forms.ListBox();
@@ -107,7 +106,15 @@
             this.NameDetailLabel = new System.Windows.Forms.Label();
             this.ReduceHPLabel = new System.Windows.Forms.Label();
             this.ReduceHPInput = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportCharactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.charactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.savedCharactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutDD5eCombatTrackerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ItemsGroupBox.SuspendLayout();
             this.ConditionsListGroupbox.SuspendLayout();
             this.DeathSavesListGroupBox.SuspendLayout();
@@ -116,11 +123,13 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ConditionsDetailGroupBox.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(12, 525);
+            this.SaveButton.Location = new System.Drawing.Point(12, 537);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 43);
             this.SaveButton.TabIndex = 28;
@@ -131,7 +140,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(105, 525);
+            this.DeleteButton.Location = new System.Drawing.Point(105, 537);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 43);
             this.DeleteButton.TabIndex = 29;
@@ -168,7 +177,7 @@
             this.ItemsGroupBox.Controls.Add(this.InitiativeList);
             this.ItemsGroupBox.Controls.Add(this.InfoListGroupBox);
             this.ItemsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.ItemsGroupBox.Location = new System.Drawing.Point(12, 24);
             this.ItemsGroupBox.Name = "ItemsGroupBox";
             this.ItemsGroupBox.Size = new System.Drawing.Size(371, 512);
             this.ItemsGroupBox.TabIndex = 4;
@@ -575,7 +584,7 @@
             this.DetailsGroupBox.Controls.Add(this.InitiativeDetailLabel);
             this.DetailsGroupBox.Controls.Add(this.NameDetailLabel);
             this.DetailsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsGroupBox.Location = new System.Drawing.Point(389, 12);
+            this.DetailsGroupBox.Location = new System.Drawing.Point(389, 24);
             this.DetailsGroupBox.Name = "DetailsGroupBox";
             this.DetailsGroupBox.Size = new System.Drawing.Size(393, 512);
             this.DetailsGroupBox.TabIndex = 5;
@@ -926,7 +935,7 @@
             // 
             this.ReduceHPLabel.AutoSize = true;
             this.ReduceHPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReduceHPLabel.Location = new System.Drawing.Point(209, 539);
+            this.ReduceHPLabel.Location = new System.Drawing.Point(209, 551);
             this.ReduceHPLabel.Name = "ReduceHPLabel";
             this.ReduceHPLabel.Size = new System.Drawing.Size(92, 18);
             this.ReduceHPLabel.TabIndex = 14;
@@ -935,28 +944,98 @@
             // ReduceHPInput
             // 
             this.ReduceHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReduceHPInput.Location = new System.Drawing.Point(307, 538);
+            this.ReduceHPInput.Location = new System.Drawing.Point(307, 550);
             this.ReduceHPInput.Name = "ReduceHPInput";
             this.ReduceHPInput.Size = new System.Drawing.Size(26, 21);
             this.ReduceHPInput.TabIndex = 27;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.charactersToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
+            this.menuStrip1.TabIndex = 30;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importToolStripMenuItem,
+            this.exportCharactersToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.importToolStripMenuItem.Text = "Import Characters";
+            this.importToolStripMenuItem.ToolTipText = "Import a .json file filled with categories and characters";
+            this.importToolStripMenuItem.Click += new System.EventHandler(this.Import_Click);
+            // 
+            // exportCharactersToolStripMenuItem
+            // 
+            this.exportCharactersToolStripMenuItem.Name = "exportCharactersToolStripMenuItem";
+            this.exportCharactersToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.exportCharactersToolStripMenuItem.Text = "Export Characters";
+            this.exportCharactersToolStripMenuItem.ToolTipText = "Export a .json file filled with all your categories and characters";
+            this.exportCharactersToolStripMenuItem.Click += new System.EventHandler(this.Export_Click);
+            // 
+            // charactersToolStripMenuItem
+            // 
+            this.charactersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.savedCharactersToolStripMenuItem});
+            this.charactersToolStripMenuItem.Name = "charactersToolStripMenuItem";
+            this.charactersToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.charactersToolStripMenuItem.Text = "Characters";
+            // 
+            // savedCharactersToolStripMenuItem
+            // 
+            this.savedCharactersToolStripMenuItem.Name = "savedCharactersToolStripMenuItem";
+            this.savedCharactersToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.savedCharactersToolStripMenuItem.Text = "Saved Characters";
+            this.savedCharactersToolStripMenuItem.ToolTipText = "Manage your saved characters";
+            this.savedCharactersToolStripMenuItem.Click += new System.EventHandler(this.Characters_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutDD5eCombatTrackerToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutDD5eCombatTrackerToolStripMenuItem
+            // 
+            this.aboutDD5eCombatTrackerToolStripMenuItem.Name = "aboutDD5eCombatTrackerToolStripMenuItem";
+            this.aboutDD5eCombatTrackerToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.aboutDD5eCombatTrackerToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.aboutDD5eCombatTrackerToolStripMenuItem.Text = "About D&&D 5e Combat Tracker";
+            this.aboutDD5eCombatTrackerToolStripMenuItem.Click += new System.EventHandler(this.About_Click);
             // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 580);
+            this.ClientSize = new System.Drawing.Size(794, 588);
             this.Controls.Add(this.ReduceHPInput);
             this.Controls.Add(this.ReduceHPLabel);
             this.Controls.Add(this.DetailsGroupBox);
             this.Controls.Add(this.ItemsGroupBox);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "OverviewForm";
             this.Text = "D&D 5e Combat Tracker";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ItemsGroupBox.ResumeLayout(false);
             this.ConditionsListGroupbox.ResumeLayout(false);
             this.ConditionsListGroupbox.PerformLayout();
@@ -971,6 +1050,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ConditionsDetailGroupBox.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1054,5 +1136,13 @@
         private System.Windows.Forms.Label TempHPNextDetailLabel;
         private System.Windows.Forms.Label NextInitiativePlaceholderLabel;
         private System.Windows.Forms.Label NextNamePlaceholderLabel;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportCharactersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem charactersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem savedCharactersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutDD5eCombatTrackerToolStripMenuItem;
     }
 }
