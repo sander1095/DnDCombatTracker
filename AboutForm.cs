@@ -14,7 +14,7 @@ namespace CombatTracker
         public AboutForm()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
+            this.Text = $"About {AssemblyTitle}";
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = $"Version {AssemblyVersion}";
 
