@@ -45,7 +45,19 @@ namespace CombatTracker
                     Directory.CreateDirectory(FOLDER_PATH);
                     File.Create(FILE_PATH);
                 }
-                catch (Exception)
+                catch
+                {
+                    //TODO: Handle Exception (Maybe tell the user that things cannot be saved and thus saving data will be disabled for the user (To implement later)
+                }
+            }
+
+            if (!File.Exists(FILE_PATH))
+            {
+                try
+                {
+                    File.Create(FILE_PATH);
+                }
+                catch
                 {
                     //TODO: Handle Exception (Maybe tell the user that things cannot be saved and thus saving data will be disabled for the user (To implement later)
                 }
@@ -53,24 +65,19 @@ namespace CombatTracker
         }
 
 
-        /// <summary>
-        /// Writes the given object instance to a Json file.
-        /// </summary>
-        /// <typeparam name="T">The type of object being written to the file.</typeparam>
-        /// <param name="filePath">The file path to write the object instance to.</param>
-        /// <param name="objectToWrite">The object instance to write to the file.</param>
-        /// <param name="append">If false the file will be overwritten if it already exists. If true the contents will be appended to the file.</param>
-        /// <returns>True if writing succeeded, false otherwise</returns>
-        public bool WriteToJsonFile(List<Category> objectToWrite, bool append = false)
+        public bool SaveCategories(List<Category> objectToWrite)
         {
             TextWriter writer = null;
             try
             {
                 string contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite);
-                writer = new StreamWriter(FILE_PATH, append);
-                writer.Write(contentsToWriteToFile);
+
+                using (writer = new StreamWriter(FILE_PATH, false))
+                {
+                    writer.Write(contentsToWriteToFile);
+                }
             }
-            catch (Exception ex) //TODO: Implement better exception handling
+            catch (Exception) //TODO: Implement better exception handling
             {
                 return false;
             }
@@ -83,20 +90,20 @@ namespace CombatTracker
         }
 
         /// <summary>
-        /// Reads an object instance from an Json file.
+        /// Returns all categories. Returns an empty list when none are found.
         /// </summary>
-        /// <para>Object type must have a parameterless constructor.</para>
-        /// <typeparam name="T">The type of object to read from the file.</typeparam>
-        /// <param name="filePath">The file path to read the object instance from.</param>
-        /// <returns>Returns a new instance of the object read from the Json file.</returns>
-        public List<Category> ReadFromJsonFile()
+        /// <returns>Returns all categories. Returns an empty list when none are found.</returns>
+        public List<Category> GetCategories()
         {
             TextReader reader = null;
             try
             {
-                reader = new StreamReader(FILE_PATH);
-                var fileContents = reader.ReadToEnd();
-                var deserialized = JsonConvert.DeserializeObject<List<Category>>(fileContents);
+                string fileContents;
+                using (reader = new StreamReader(FILE_PATH))
+                {
+                    fileContents = reader.ReadToEnd();
+                }
+                var deserialized = JsonConvert.DeserializeObject<List<Category>>(fileContents) ?? new List<Category>();
                 return deserialized; //TODO: Error handling! if file is wrong, tell user file is corrupt.
             }
             finally
@@ -104,6 +111,41 @@ namespace CombatTracker
                 if (reader != null)
                     reader.Close();
             }
+        }
+
+        /// <returns>The category if found. Otherwise null.</returns>
+        public Category GetCategory(string name)
+        {
+            try
+            {
+                return GetCategories().Single(x => x.Name == name);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public void AddCategory(Category category)
+        {
+            var categories = GetCategories();
+            categories.Add(category);
+            SaveCategories(categories);
+        }
+
+        public void EditCategory(Category category)
+        {
+            var categories = GetCategories();
+            categories.Single(x => x.Name == category.Name).Characters = category.Characters;
+
+            SaveCategories(categories);
+        }
+
+        public void DeleteCategory(Category category)
+        {
+            var categories = GetCategories();
+            categories.Remove(category);
+            SaveCategories(categories);
         }
     }
 }

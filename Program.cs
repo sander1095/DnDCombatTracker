@@ -12,13 +12,13 @@ namespace CombatTracker
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            /*
+        {/*
+            
             //Create/Check save data
             var x = DataSaver.Instance;
 
 
-            var o = DataSaver.Instance.ReadFromJsonFile();
+            var o = DataSaver.Instance.GetCategories();
 
             //Test some stuff
             var condition_list_1 = new List<Conditions>() { Conditions.Blinded, Conditions.Deafened, Conditions.Grappled };
@@ -48,7 +48,7 @@ namespace CombatTracker
 
             var listOfCategories = new List<Category>() { category_1, category_2, category_3, category_4 };
             
-            DataSaver.Instance.WriteToJsonFile(listOfCategories);
+            DataSaver.Instance.SaveCategories(listOfCategories);
             */
 
             Application.EnableVisualStyles();

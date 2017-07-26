@@ -52,10 +52,7 @@ namespace CombatTracker.Models
             Conditions = conditions;
         }
 
-        public Character()
-        {
-
-        }
+        public Character() { }
 
         public override string ToString()
         {
@@ -69,7 +66,7 @@ namespace CombatTracker.Models
 
         public int CompareTo(Character other)
         {
-            return this.Initiative < other.Initiative ? -1 : (this.Initiative == other.Initiative) ? 0 : 1;
+            return Initiative < other.Initiative ? -1 : (-Initiative == other.Initiative) ? 0 : 1;
         }
     }
 }

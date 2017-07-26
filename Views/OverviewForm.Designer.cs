@@ -107,11 +107,10 @@
             this.ReduceHPLabel = new System.Windows.Forms.Label();
             this.ReduceHPInput = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportCharactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.charactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savedCharactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.saveCharactersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutDD5eCombatTrackerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -952,7 +951,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
             this.charactersToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -961,35 +959,12 @@
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importToolStripMenuItem,
-            this.exportCharactersToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.importToolStripMenuItem.Text = "Import Characters";
-            this.importToolStripMenuItem.ToolTipText = "Import a .json file filled with categories and characters";
-            this.importToolStripMenuItem.Click += new System.EventHandler(this.Import_Click);
-            // 
-            // exportCharactersToolStripMenuItem
-            // 
-            this.exportCharactersToolStripMenuItem.Name = "exportCharactersToolStripMenuItem";
-            this.exportCharactersToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.exportCharactersToolStripMenuItem.Text = "Export Characters";
-            this.exportCharactersToolStripMenuItem.ToolTipText = "Export a .json file filled with all your categories and characters";
-            this.exportCharactersToolStripMenuItem.Click += new System.EventHandler(this.Export_Click);
-            // 
             // charactersToolStripMenuItem
             // 
             this.charactersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.savedCharactersToolStripMenuItem});
+            this.savedCharactersToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.saveCharactersToolStripMenuItem});
             this.charactersToolStripMenuItem.Name = "charactersToolStripMenuItem";
             this.charactersToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.charactersToolStripMenuItem.Text = "Characters";
@@ -997,10 +972,22 @@
             // savedCharactersToolStripMenuItem
             // 
             this.savedCharactersToolStripMenuItem.Name = "savedCharactersToolStripMenuItem";
-            this.savedCharactersToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.savedCharactersToolStripMenuItem.Text = "Saved Characters";
+            this.savedCharactersToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.savedCharactersToolStripMenuItem.Text = "All characters";
             this.savedCharactersToolStripMenuItem.ToolTipText = "Manage your saved characters";
             this.savedCharactersToolStripMenuItem.Click += new System.EventHandler(this.Characters_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            // 
+            // saveCharactersToolStripMenuItem
+            // 
+            this.saveCharactersToolStripMenuItem.Name = "saveCharactersToolStripMenuItem";
+            this.saveCharactersToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.saveCharactersToolStripMenuItem.Text = "Save characters";
+            this.saveCharactersToolStripMenuItem.Click += new System.EventHandler(this.SaveCharactersToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -1138,12 +1125,11 @@
         private System.Windows.Forms.Label NextInitiativePlaceholderLabel;
         private System.Windows.Forms.Label NextNamePlaceholderLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportCharactersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem charactersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savedCharactersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutDD5eCombatTrackerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem saveCharactersToolStripMenuItem;
     }
 }
