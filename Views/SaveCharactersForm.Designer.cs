@@ -55,6 +55,7 @@
             this.charactersList.Name = "charactersList";
             this.charactersList.Size = new System.Drawing.Size(263, 139);
             this.charactersList.TabIndex = 1;
+            this.charactersList.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.charactersList_Format);
             // 
             // categoriesComboBox
             // 

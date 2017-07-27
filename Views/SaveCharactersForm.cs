@@ -124,5 +124,10 @@ namespace CombatTracker.Views
                 categoriesComboBox.SelectedItem = item;
             }
         }
+
+        private void charactersList_Format(object sender, ListControlConvertEventArgs e)
+        {
+            e.Value = ((Character)e.ListItem).Name;
+        }
     }
 }
