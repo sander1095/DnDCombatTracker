@@ -111,17 +111,16 @@ namespace CombatTracker.Views
 
         private void addCategoryButton_Click(object sender, EventArgs e)
         {
-            var form = new AddCategoryForm();
+            var form = new MutateCategoryForm();
             form.ShowDialog();
-            if (form.CategoryWasAdded)
+            if (form.CategoryName != null)
             {
-                var newCategories = DataSaver.Instance.GetCategories();
-                var item = newCategories.Single(x => !_categories.Any(c => x.Name == c.Name));
-                _categories.Add(item);
+                Category cat = new Category() { Name = form.CategoryName };
+                _categories.Add(cat);
                 SaveButton.Enabled = true;
                 StatusLabel.Visible = false;
                 categoriesComboBox.Enabled = true;
-                categoriesComboBox.SelectedItem = item;
+                categoriesComboBox.SelectedItem = cat;
             }
         }
 

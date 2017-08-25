@@ -631,12 +631,8 @@ namespace CombatTracker
 
         private void Characters_Click(object sender, EventArgs e)
         {
-            new CharactersForm().Show();
-            //Default give the current list of characters on harddisk (DataSaver.GetCharacters() or something) as a parameter
-
-            //Do the stuff that you noted down
-
-            //Remember to check out the D&D monster API, maybe have a list of Default monsters
+            new CharactersForm(CharacterList).ShowDialog();
+            //TODO: Remember to check out the D&D monster API, maybe have a list of Default monsters when you create a new version!
         }
 
         private void SaveCharactersToolStripMenuItem_Click(object sender, EventArgs e)

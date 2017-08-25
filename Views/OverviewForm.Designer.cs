@@ -1023,6 +1023,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "OverviewForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "D&D 5e Combat Tracker";
             this.ItemsGroupBox.ResumeLayout(false);
             this.ConditionsListGroupbox.ResumeLayout(false);

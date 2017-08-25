@@ -43,25 +43,26 @@ namespace CombatTracker
                 try
                 {
                     Directory.CreateDirectory(FOLDER_PATH);
-                    File.Create(FILE_PATH);
-                }
-                catch
-                {
-                    //TODO: Handle Exception (Maybe tell the user that things cannot be saved and thus saving data will be disabled for the user (To implement later)
-                }
-            }
 
-            if (!File.Exists(FILE_PATH))
-            {
-                try
-                {
-                    File.Create(FILE_PATH);
+                    using (FileStream fs = File.Create(FILE_PATH)) { };
+                   
                 }
                 catch
                 {
                     //TODO: Handle Exception (Maybe tell the user that things cannot be saved and thus saving data will be disabled for the user (To implement later)
                 }
             }
+                if (!File.Exists(FILE_PATH))
+                {
+                    try
+                    {
+                        using (FileStream fs = File.Create(FILE_PATH)) { };
+                    }
+                    catch
+                    {
+                        //TODO: Handle Exception (Maybe tell the user that things cannot be saved and thus saving data will be disabled for the user (To implement later)
+                    }
+                }
         }
 
 
@@ -120,7 +121,7 @@ namespace CombatTracker
             {
                 return GetCategories().Single(x => x.Name == name);
             }
-            catch
+            catch(Exception e)
             {
                 return null;
             }
@@ -141,10 +142,12 @@ namespace CombatTracker
             SaveCategories(categories);
         }
 
+        //TODO: We are using the name here with a .Single instead of a normal .Remove(category) cuz it cannot find it. Fix this.
         public void DeleteCategory(Category category)
         {
             var categories = GetCategories();
-            categories.Remove(category);
+
+            categories.Remove(categories.Single(x => x.Name == category.Name));
             SaveCategories(categories);
         }
     }

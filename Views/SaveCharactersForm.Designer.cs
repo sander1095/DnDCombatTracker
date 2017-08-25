@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaveCharactersForm));
             this.SaveButton = new System.Windows.Forms.Button();
             this.charactersList = new System.Windows.Forms.CheckedListBox();
             this.categoriesComboBox = new System.Windows.Forms.ComboBox();
@@ -131,9 +132,11 @@
             this.Controls.Add(this.charactersList);
             this.Controls.Add(this.SaveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SaveCharactersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Save Characters";
             this.ResumeLayout(false);
             this.PerformLayout();

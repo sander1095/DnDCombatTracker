@@ -56,7 +56,6 @@ namespace CombatTracker.Models
 
         public override string ToString()
         {
-            //Determine if the HP part should be shown or not:
             if (HP.HasValue)
             {
                 return $"({Initiative})\t{Name}\tHP:{HP}";

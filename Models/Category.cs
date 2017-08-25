@@ -13,7 +13,7 @@ namespace CombatTracker.Models
     {
         public string Name { get; set; }
 
-        public IList<Character> Characters { get; set; }
+        public IList<Character> Characters { get; set; } = new List<Character>();
 
         public Category()
         {
