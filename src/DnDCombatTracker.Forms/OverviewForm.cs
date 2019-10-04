@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using DnDCombatTracker.Core;
 
-namespace CombatTracker
+namespace DnDCombatTracker
 {
     public partial class OverviewForm : Form
     {
@@ -161,6 +162,7 @@ namespace CombatTracker
 
             #region inputChecking
             string name = NameInput.Text.Trim();
+            string notes = NotesInput.Text.Trim();
             short initiative;
 
             short? hp = TryParseNullable(HPInput.Text.Trim());
@@ -349,7 +351,7 @@ namespace CombatTracker
                 short fails = (short)ListDeathSavesFail.Count(x => x.Checked);
                 short successes = (short)ListDeathSavesSuccess.Count(x => x.Checked);
 
-                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions);
+                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions, notes);
 
                 //Update or insert the character
                 if (CharacterList.ToList().Exists(x => x.Name == name))
@@ -514,6 +516,8 @@ namespace CombatTracker
                 HPPlaceholderLabel.Text = string.Empty;
                 MaxHPPlaceholderLabel.Text = string.Empty;
                 TempHPPlaceholderLabel.Text = string.Empty;
+                NotesDisplay.Text = string.Empty;
+
                 //Checkboxes
                 for (int i = 0; i < DetailDeathSavesFail.Length; i++)
                 {
@@ -533,6 +537,7 @@ namespace CombatTracker
             {
                 NamePlaceholderLabel.Text = character.Name;
                 InitiativePlaceholderLabel.Text = character.Initiative.ToString();
+                NotesDisplay.Text = character.Note;
 
                 if (character.HP.HasValue || character.MaxHP.HasValue)
                 {

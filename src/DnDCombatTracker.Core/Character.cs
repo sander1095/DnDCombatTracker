@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CombatTracker
+namespace DnDCombatTracker.Core
 {
 
     public enum Conditions
@@ -38,9 +38,11 @@ namespace CombatTracker
 
         public short DeathSaves_Success { get; set; }
 
+        public string Note { get; set; }
+
         public List<Conditions> Conditions { get; set; }
 
-        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions)
+        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions, string notes)
         {
             Name = name;
             Initiative = initiative;
@@ -50,6 +52,7 @@ namespace CombatTracker
             DeathSaves_Fail = fail;
             DeathSaves_Success = success;
             Conditions = conditions;
+            Note = notes;
         }
 
         public override string ToString()

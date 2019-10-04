@@ -7,12 +7,13 @@
     <ProjectGuid>{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CombatTracker</RootNamespace>
-    <AssemblyName>CombatTracker</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>DnDCombatTracker</RootNamespace>
+    <AssemblyName>DnDCombatTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>E:\Projects\C#\Initiative Tracker\InitiativeTracker\publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -87,7 +88,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
     <Compile Include="OverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DnDCombatTracker.Core\DnDCombatTracker.Core.csproj">
+      <Project>{5287ee3a-f653-40b0-b82c-5d0a42b74da1}</Project>
+      <Name>DnDCombatTracker.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

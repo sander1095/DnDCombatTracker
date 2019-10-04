@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CombatTracker
+namespace DnDCombatTracker
 {
     static class Program
     {

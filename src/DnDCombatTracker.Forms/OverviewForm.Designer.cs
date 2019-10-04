@@ -1,4 +1,4 @@
-﻿namespace CombatTracker
+﻿namespace DnDCombatTracker
 {
     partial class OverviewForm
     {
@@ -61,6 +61,8 @@
             this.FailListLabel = new System.Windows.Forms.Label();
             this.SuccessListLabel = new System.Windows.Forms.Label();
             this.InfoListGroupBox = new System.Windows.Forms.GroupBox();
+            this.NotesLabel = new System.Windows.Forms.Label();
+            this.NotesInput = new System.Windows.Forms.TextBox();
             this.NameListLabel = new System.Windows.Forms.Label();
             this.TempHPInput = new System.Windows.Forms.TextBox();
             this.NameInput = new System.Windows.Forms.TextBox();
@@ -107,6 +109,8 @@
             this.NameDetailLabel = new System.Windows.Forms.Label();
             this.ReduceHPLabel = new System.Windows.Forms.Label();
             this.ReduceHPInput = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.NotesDisplay = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.ItemsGroupBox.SuspendLayout();
             this.ConditionsListGroupbox.SuspendLayout();
@@ -116,6 +120,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ConditionsDetailGroupBox.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -142,9 +147,9 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(306, 317);
+            this.NextButton.Location = new System.Drawing.Point(306, 343);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(75, 190);
+            this.NextButton.Size = new System.Drawing.Size(75, 164);
             this.NextButton.TabIndex = 30;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -447,6 +452,8 @@
             // 
             // InfoListGroupBox
             // 
+            this.InfoListGroupBox.Controls.Add(this.NotesLabel);
+            this.InfoListGroupBox.Controls.Add(this.NotesInput);
             this.InfoListGroupBox.Controls.Add(this.NameListLabel);
             this.InfoListGroupBox.Controls.Add(this.TempHPInput);
             this.InfoListGroupBox.Controls.Add(this.NameInput);
@@ -464,6 +471,25 @@
             this.InfoListGroupBox.TabIndex = 14;
             this.InfoListGroupBox.TabStop = false;
             this.InfoListGroupBox.Text = "Information";
+            // 
+            // NotesLabel
+            // 
+            this.NotesLabel.AutoSize = true;
+            this.NotesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotesLabel.Location = new System.Drawing.Point(212, 20);
+            this.NotesLabel.Name = "NotesLabel";
+            this.NotesLabel.Size = new System.Drawing.Size(52, 18);
+            this.NotesLabel.TabIndex = 10;
+            this.NotesLabel.Text = "Notes:";
+            // 
+            // NotesInput
+            // 
+            this.NotesInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotesInput.Location = new System.Drawing.Point(212, 43);
+            this.NotesInput.Multiline = true;
+            this.NotesInput.Name = "NotesInput";
+            this.NotesInput.Size = new System.Drawing.Size(143, 89);
+            this.NotesInput.TabIndex = 9;
             // 
             // NameListLabel
             // 
@@ -559,6 +585,7 @@
             // 
             // DetailsGroupBox
             // 
+            this.DetailsGroupBox.Controls.Add(this.groupBox3);
             this.DetailsGroupBox.Controls.Add(this.groupBox2);
             this.DetailsGroupBox.Controls.Add(this.DetailSeperatorLabel);
             this.DetailsGroupBox.Controls.Add(this.groupBox1);
@@ -595,9 +622,9 @@
             this.groupBox2.Controls.Add(this.NextInitiativePlaceholderLabel);
             this.groupBox2.Controls.Add(this.NextNamePlaceholderLabel);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 308);
+            this.groupBox2.Location = new System.Drawing.Point(11, 336);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(289, 199);
+            this.groupBox2.Size = new System.Drawing.Size(289, 171);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Next Character Information";
@@ -606,7 +633,7 @@
             // 
             this.NextMaxHPPlaceholderLabel.AutoSize = true;
             this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(186, 107);
+            this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(186, 98);
             this.NextMaxHPPlaceholderLabel.Name = "NextMaxHPPlaceholderLabel";
             this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextMaxHPPlaceholderLabel.TabIndex = 35;
@@ -615,7 +642,7 @@
             // 
             this.NameNextDetailLabel.AutoSize = true;
             this.NameNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameNextDetailLabel.Location = new System.Drawing.Point(18, 35);
+            this.NameNextDetailLabel.Location = new System.Drawing.Point(18, 26);
             this.NameNextDetailLabel.Name = "NameNextDetailLabel";
             this.NameNextDetailLabel.Size = new System.Drawing.Size(74, 25);
             this.NameNextDetailLabel.TabIndex = 26;
@@ -625,7 +652,7 @@
             // 
             this.HPDividerNextDetailLabel.AutoSize = true;
             this.HPDividerNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPDividerNextDetailLabel.Location = new System.Drawing.Point(168, 107);
+            this.HPDividerNextDetailLabel.Location = new System.Drawing.Point(168, 98);
             this.HPDividerNextDetailLabel.Name = "HPDividerNextDetailLabel";
             this.HPDividerNextDetailLabel.Size = new System.Drawing.Size(12, 18);
             this.HPDividerNextDetailLabel.TabIndex = 34;
@@ -635,7 +662,7 @@
             // 
             this.InitiativeNextDetailLabel.AutoSize = true;
             this.InitiativeNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InitiativeNextDetailLabel.Location = new System.Drawing.Point(18, 69);
+            this.InitiativeNextDetailLabel.Location = new System.Drawing.Point(18, 60);
             this.InitiativeNextDetailLabel.Name = "InitiativeNextDetailLabel";
             this.InitiativeNextDetailLabel.Size = new System.Drawing.Size(97, 25);
             this.InitiativeNextDetailLabel.TabIndex = 27;
@@ -645,7 +672,7 @@
             // 
             this.NextTempHPPlaceholderLabel.AutoSize = true;
             this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(138, 142);
+            this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(138, 133);
             this.NextTempHPPlaceholderLabel.Name = "NextTempHPPlaceholderLabel";
             this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextTempHPPlaceholderLabel.TabIndex = 33;
@@ -654,7 +681,7 @@
             // 
             this.HPNextDetailLabel.AutoSize = true;
             this.HPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPNextDetailLabel.Location = new System.Drawing.Point(18, 103);
+            this.HPNextDetailLabel.Location = new System.Drawing.Point(18, 94);
             this.HPNextDetailLabel.Name = "HPNextDetailLabel";
             this.HPNextDetailLabel.Size = new System.Drawing.Size(47, 25);
             this.HPNextDetailLabel.TabIndex = 28;
@@ -664,7 +691,7 @@
             // 
             this.NextHPPlaceholderLabel.AutoSize = true;
             this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(138, 107);
+            this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(138, 98);
             this.NextHPPlaceholderLabel.Name = "NextHPPlaceholderLabel";
             this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextHPPlaceholderLabel.TabIndex = 32;
@@ -673,7 +700,7 @@
             // 
             this.TempHPNextDetailLabel.AutoSize = true;
             this.TempHPNextDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPNextDetailLabel.Location = new System.Drawing.Point(18, 137);
+            this.TempHPNextDetailLabel.Location = new System.Drawing.Point(18, 128);
             this.TempHPNextDetailLabel.Name = "TempHPNextDetailLabel";
             this.TempHPNextDetailLabel.Size = new System.Drawing.Size(107, 25);
             this.TempHPNextDetailLabel.TabIndex = 29;
@@ -683,7 +710,7 @@
             // 
             this.NextInitiativePlaceholderLabel.AutoSize = true;
             this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(138, 73);
+            this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(138, 64);
             this.NextInitiativePlaceholderLabel.Name = "NextInitiativePlaceholderLabel";
             this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextInitiativePlaceholderLabel.TabIndex = 31;
@@ -692,7 +719,7 @@
             // 
             this.NextNamePlaceholderLabel.AutoSize = true;
             this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(138, 39);
+            this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(138, 30);
             this.NextNamePlaceholderLabel.Name = "NextNamePlaceholderLabel";
             this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(0, 18);
             this.NextNamePlaceholderLabel.TabIndex = 30;
@@ -719,7 +746,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(11, 208);
+            this.groupBox1.Location = new System.Drawing.Point(11, 171);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 73);
             this.groupBox1.TabIndex = 9;
@@ -809,7 +836,7 @@
             // ConditionsDetailGroupBox
             // 
             this.ConditionsDetailGroupBox.Controls.Add(this.ConditionsPlaceholderList);
-            this.ConditionsDetailGroupBox.Location = new System.Drawing.Point(204, 119);
+            this.ConditionsDetailGroupBox.Location = new System.Drawing.Point(204, 82);
             this.ConditionsDetailGroupBox.Name = "ConditionsDetailGroupBox";
             this.ConditionsDetailGroupBox.Size = new System.Drawing.Size(183, 162);
             this.ConditionsDetailGroupBox.TabIndex = 24;
@@ -940,6 +967,26 @@
             this.ReduceHPInput.Size = new System.Drawing.Size(26, 21);
             this.ReduceHPInput.TabIndex = 27;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.NotesDisplay);
+            this.groupBox3.Location = new System.Drawing.Point(11, 251);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(376, 86);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Notes";
+            // 
+            // NotesDisplay
+            // 
+            this.NotesDisplay.Enabled = false;
+            this.NotesDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotesDisplay.Location = new System.Drawing.Point(7, 24);
+            this.NotesDisplay.Multiline = true;
+            this.NotesDisplay.Name = "NotesDisplay";
+            this.NotesDisplay.Size = new System.Drawing.Size(363, 55);
+            this.NotesDisplay.TabIndex = 0;
+            // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -971,6 +1018,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ConditionsDetailGroupBox.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1054,5 +1103,9 @@
         private System.Windows.Forms.Label TempHPNextDetailLabel;
         private System.Windows.Forms.Label NextInitiativePlaceholderLabel;
         private System.Windows.Forms.Label NextNamePlaceholderLabel;
+        private System.Windows.Forms.Label NotesLabel;
+        private System.Windows.Forms.TextBox NotesInput;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox NotesDisplay;
     }
 }
