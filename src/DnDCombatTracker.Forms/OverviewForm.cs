@@ -537,7 +537,7 @@ namespace DnDCombatTracker
             {
                 NamePlaceholderLabel.Text = character.Name;
                 InitiativePlaceholderLabel.Text = character.Initiative.ToString();
-                NotesDisplay.Text = character.Note;
+                NotesDisplay.Text = character.Notes;
 
                 if (character.HP.HasValue || character.MaxHP.HasValue)
                 {

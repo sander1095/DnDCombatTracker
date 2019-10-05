@@ -38,7 +38,7 @@ namespace DnDCombatTracker.Core
 
         public short DeathSaves_Success { get; set; }
 
-        public string Note { get; set; }
+        public string Notes { get; set; }
 
         public List<Conditions> Conditions { get; set; }
 
@@ -52,7 +52,7 @@ namespace DnDCombatTracker.Core
             DeathSaves_Fail = fail;
             DeathSaves_Success = success;
             Conditions = conditions;
-            Note = notes;
+            Notes = notes;
         }
 
         public override string ToString()
