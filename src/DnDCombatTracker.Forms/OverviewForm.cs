@@ -431,6 +431,7 @@ namespace DnDCombatTracker
                 HPInput.Text = string.Empty;
                 MaxHPInput.Text = string.Empty;
                 TempHPInput.Text = string.Empty;
+                NotesInput.Text = string.Empty;
 
                 for (int i = 0; i < ListDeathSavesFail.Length; i++)
                 {
@@ -457,6 +458,7 @@ namespace DnDCombatTracker
             {
                 NameInput.Text = character.Name;
                 InitiativeInput.Text = character.Initiative.ToString();
+                NotesInput.Text = character.Notes;
 
                 if (character.HP.HasValue || character.MaxHP.HasValue)
                 {
