@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace CombatTracker
+namespace DnDCombatTracker
 {
     public partial class OverviewForm : Form
     {

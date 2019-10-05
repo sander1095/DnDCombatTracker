@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CombatTracker
+namespace DnDCombatTracker
 {
 
     public enum Conditions

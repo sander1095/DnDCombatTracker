@@ -1,4 +1,4 @@
-﻿namespace CombatTracker
+﻿namespace DnDCombatTracker
 {
     partial class OverviewForm
     {
