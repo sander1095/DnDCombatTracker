@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDCombatTracker", "DnDCombatTracker.Forms/DnDCombatTracker.csproj", "{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDCombatTracker.Forms", "DnDCombatTracker.Forms\DnDCombatTracker.Forms.csproj", "{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDCombatTracker.Core", "DnDCombatTracker.Core\DnDCombatTracker.Core.csproj", "{5287EE3A-F653-40B0-B82C-5D0A42B74DA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +17,15 @@ Global
 		{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6D72DE7-073A-42CB-B4ED-2787B0BB9747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5287EE3A-F653-40B0-B82C-5D0A42B74DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5287EE3A-F653-40B0-B82C-5D0A42B74DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5287EE3A-F653-40B0-B82C-5D0A42B74DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5287EE3A-F653-40B0-B82C-5D0A42B74DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8BC1E4CC-F47E-4C16-BD2B-EA4C5D364A0D}
+		SolutionGuid = {5394B31D-D9E7-4025-B91A-0E0E1FD828DD}
 	EndGlobalSection
 EndGlobal
