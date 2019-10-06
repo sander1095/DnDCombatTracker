@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CombatTracker.Models
+namespace CombatTracker
 {
 
     public enum Conditions
@@ -40,7 +40,7 @@ namespace CombatTracker.Models
 
         public List<Conditions> Conditions { get; set; }
 
-        public Character(string name, short initiative, short fail, short success, List<Conditions> conditions, short? maxHP, short? HP, short? tempHP)
+        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions)
         {
             Name = name;
             Initiative = initiative;
@@ -52,10 +52,9 @@ namespace CombatTracker.Models
             Conditions = conditions;
         }
 
-        public Character() { }
-
         public override string ToString()
         {
+            //Determine if the HP part should be shown or not:
             if (HP.HasValue)
             {
                 return $"({Initiative})\t{Name}\tHP:{HP}";
@@ -65,7 +64,7 @@ namespace CombatTracker.Models
 
         public int CompareTo(Character other)
         {
-            return Initiative < other.Initiative ? -1 : (-Initiative == other.Initiative) ? 0 : 1;
+            return this.Initiative < other.Initiative ? -1 : (this.Initiative == other.Initiative) ? 0 : 1;
         }
     }
 }

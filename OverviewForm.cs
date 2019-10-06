@@ -1,6 +1,4 @@
-﻿using CombatTracker.Models;
-using CombatTracker.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,8 +49,6 @@ namespace CombatTracker
             };
 
             #endregion
-
-            
         }
 
 
@@ -353,7 +349,7 @@ namespace CombatTracker
                 short fails = (short)ListDeathSavesFail.Count(x => x.Checked);
                 short successes = (short)ListDeathSavesSuccess.Count(x => x.Checked);
 
-                Character character = new Character(name, initiative, fails, successes, chosenConditions, maxHP, hp, tempHP);
+                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions);
 
                 //Update or insert the character
                 if (CharacterList.ToList().Exists(x => x.Name == name))
@@ -621,30 +617,8 @@ namespace CombatTracker
 
         private short? TryParseNullable(string val)
         {
-            return short.TryParse(val, out short outValue) ? (short?)outValue : null;
-        }
-
-        private void About_Click(object sender, EventArgs e)
-        {
-            new AboutForm().Show();
-        }
-
-        private void Characters_Click(object sender, EventArgs e)
-        {
-            new CharactersForm(CharacterList).ShowDialog();
-            //TODO: Remember to check out the D&D monster API, maybe have a list of Default monsters when you create a new version!
-        }
-
-        private void SaveCharactersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (CharacterList.Count == 0)
-            {
-                MessageBoxEx.Show("You do not have any characters to save. Add at least 1 character and try again.", "Cannot open this window!");
-            }
-            else
-            {
-                new SaveCharactersForm(CharacterList).ShowDialog();
-            }
+            short outValue;
+            return short.TryParse(val, out outValue) ? (short?)outValue : null;
         }
     }
 }
