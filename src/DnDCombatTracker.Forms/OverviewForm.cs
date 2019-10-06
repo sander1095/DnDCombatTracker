@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Deployment.Application;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -22,6 +23,13 @@ namespace DnDCombatTracker
         public OverviewForm()
         {
             InitializeComponent();
+
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                this.Text = string.Format("D&D 5e Combat Tracker - v{0}",
+                    ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(4));
+            }
+
             CharacterList = new BindingList<Character>();
             InitiativeList.DataSource = CharacterList;
 
