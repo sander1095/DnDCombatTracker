@@ -12,7 +12,6 @@ namespace DnDCombatTracker
 {
     public partial class OverviewForm : Form
     {
-        private BindingList<Character> CharacterList { get; set; }
         private Dictionary<CheckBox, Conditions> ConditionsDictionary;
 
         private CheckBox[] ListDeathSavesSuccess;
@@ -20,9 +19,13 @@ namespace DnDCombatTracker
         private CheckBox[] DetailDeathSavesSuccess;
         private CheckBox[] DetailDeathSavesFail;
 
+        private CombatManagerService _combatManagerService { get; set; }
+
         public OverviewForm()
         {
             InitializeComponent();
+
+            _combatManagerService = new CombatManagerService();
 
             if (ApplicationDeployment.IsNetworkDeployed)
             {
@@ -30,8 +33,7 @@ namespace DnDCombatTracker
                     ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(4));
             }
 
-            CharacterList = new BindingList<Character>();
-            InitiativeList.DataSource = CharacterList;
+            InitiativeList.DataSource = _combatManagerService.Combatants;
 
             ListDeathSavesSuccess = new[] { Success1ListCheckbox, Success2ListCheckbox, Success3ListCheckbox };
             ListDeathSavesFail = new[] { Fail1ListCheckbox, Fail2ListCheckbox, Fail3ListCheckbox };
@@ -64,23 +66,13 @@ namespace DnDCombatTracker
         private void NextButton_Click(object sender, EventArgs e)
         {
 
-            if (CharacterList.Count < 2)
+            _combatManagerService.AdvanceTurn();
+
+            UpdateDetailsTab(_combatManagerService.CurrentCharacter);
+
+            if (_combatManagerService.Combatants.Count > 1)
             {
-                return;
-            }
-
-            Character currentCharacter = CharacterList.ToList().Single(x => x.Name == NamePlaceholderLabel.Text);//InitiativeList.SelectedValue as Character;
-            int currentIndex = CharacterList.IndexOf(currentCharacter);
-            int indexToSet = currentIndex + 1 == CharacterList.Count ? 0 : currentIndex + 1; //Check if wrap around is needed
-
-            Character newCharacter = CharacterList[indexToSet];
-            Character newNextCharacter = CharacterList[indexToSet + 1 == CharacterList.Count ? 0 : indexToSet + 1];
-
-            UpdateDetailsTab(newCharacter);
-
-            if (CharacterList.Count > 1)
-            {
-                UpdateNextTab(newNextCharacter);
+                UpdateNextTab(_combatManagerService.NextCharacter);
             }
             else
             {
@@ -91,68 +83,36 @@ namespace DnDCombatTracker
                 NextTempHPPlaceholderLabel.Text = string.Empty;
             }
 
+
+
             //Change the index of the InitiativeList so that event will automatically update the Information tab and stuff
-            InitiativeList.SelectedIndex = indexToSet;
+            InitiativeList.SelectedIndex = _combatManagerService.Combatants.IndexOf(_combatManagerService.CurrentCharacter);
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if (CharacterList.Count == 2)
-            {
-                CharacterList.Remove(InitiativeList.SelectedValue as Character ?? CharacterList[0]);
 
+
+            //calculate new index
+            int currentIndex = InitiativeList.SelectedIndex;
+            //remove selected character and update listbox
+            _combatManagerService.DeleteCharacter(InitiativeList.SelectedValue as Character ?? _combatManagerService.Combatants.FirstOrDefault());
+            InitiativeList.DataSource = null;
+            InitiativeList.DataSource = _combatManagerService.Combatants;
+            InitiativeList.SelectedItem = _combatManagerService.CurrentCharacter;
+
+            if (_combatManagerService.Combatants.Count != 0)
+            {
                 Character newSelectedCharacter = InitiativeList.SelectedValue as Character;
                 UpdateDetailsTab(newSelectedCharacter);
                 UpdateInfoTab(newSelectedCharacter);
 
-
-                UpdateNextTab(null);
-
+                UpdateNextTab(_combatManagerService.CurrentCharacter == _combatManagerService.NextCharacter ? null : _combatManagerService.NextCharacter);
             }
-            else if (CharacterList.Count == 1)
+            else
             {
-                CharacterList.Remove(InitiativeList.SelectedValue as Character ?? CharacterList[0]);
-
                 UpdateDetailsTab(null);
                 UpdateNextTab(null);
-            }
-            else if (CharacterList.Count != 0)
-            {
-                CharacterList.Remove(InitiativeList.SelectedValue as Character ?? CharacterList[0]);
-
-
-                var characterDetail = CharacterList.SingleOrDefault(x => x.Name == NamePlaceholderLabel.Text);
-                var characterNext = CharacterList.SingleOrDefault(x => x.Name == NextNamePlaceholderLabel.Text);
-                if (characterDetail == null)
-                {
-                    //We are deleting the item displayed in the detail tab.
-                    //Update that!
-                    Character newSelectedCharacter = InitiativeList.SelectedValue as Character;
-                    UpdateDetailsTab(newSelectedCharacter);
-
-                    int currentIndex = CharacterList.IndexOf(newSelectedCharacter);
-                    int newIndex = currentIndex + 1 == CharacterList.Count ? 0 : currentIndex + 1;
-                    UpdateNextTab(CharacterList[newIndex]);
-
-                    UpdateInfoTab(newSelectedCharacter);
-                }
-                //We are not deleting the current item
-                else if (characterNext == null)                //Are we deleting the next item? If so, we should update the next item!
-                {
-                    //We are deleting the next item, we should update that to the new next item!
-                    int currentIndex = CharacterList.IndexOf(CharacterList.Single(x => x.Name == NamePlaceholderLabel.Text));
-                    int newIndex = currentIndex + 1 == CharacterList.Count ? 0 : currentIndex + 1;
-                    UpdateNextTab(CharacterList[newIndex]);
-                }
-                else
-                {
-                    //Update the selected item
-                    InitiativeList.SelectedItem = CharacterList.Single(y => y.Name == NamePlaceholderLabel.Text);
-                    UpdateInfoTab(InitiativeList.SelectedItem as Character);
-
-                }
-                //Update the selected item
-                InitiativeList.SelectedItem = CharacterList.Single(x => x.Name == NamePlaceholderLabel.Text);
             }
         }
 
@@ -362,16 +322,7 @@ namespace DnDCombatTracker
                 Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions, notes);
 
                 //Update or insert the character
-                if (CharacterList.ToList().Exists(x => x.Name == name))
-                {
-                    //Update
-                    CharacterList[CharacterList.IndexOf(CharacterList.ToList().Single(x => x.Name == name))] = character;
-                }
-                else
-                {
-                    //New
-                    CharacterList.Add(character);
-                }
+                _combatManagerService.SaveCharacter(character);
 
                 Sort();
 
@@ -388,17 +339,15 @@ namespace DnDCombatTracker
                 }
 
                 //Now update the next info thing
-                if (CharacterList.Count > 1)
+                if (_combatManagerService.Combatants.Count > 1)
                 {
                     //Get the index of the current detail character(It should be up to date as we just updated it if necesarry
-                    Character current = CharacterList.Single(x => x.Name == NamePlaceholderLabel.Text);
-                    int currentIndex = CharacterList.IndexOf(current);
+                    Character current = _combatManagerService.Combatants.Single(x => x.Name == NamePlaceholderLabel.Text);
+                    int currentIndex = _combatManagerService.Combatants.IndexOf(current);
 
-                    int nextIndex = currentIndex + 1 == CharacterList.Count ? 0 : currentIndex + 1; //Check if wrap around is needed
+                    int nextIndex = currentIndex + 1 == _combatManagerService.Combatants.Count ? 0 : currentIndex + 1; //Check if wrap around is needed
 
-                    Character nextChar = CharacterList[nextIndex];
-
-                    UpdateNextTab(nextChar);
+                    UpdateNextTab(_combatManagerService.NextCharacter);
                 }
             }
         }
@@ -407,14 +356,12 @@ namespace DnDCombatTracker
         {
             var currentSelected = InitiativeList.SelectedItem as Character;
 
-            var items = CharacterList.ToList();
-            items.Sort((a, b) => -1 * a.CompareTo(b));
-            CharacterList = new BindingList<Character>(items);
+            _combatManagerService.SortCombatants();
 
             InitiativeList.DataSource = null;
-            InitiativeList.DataSource = CharacterList;
+            InitiativeList.DataSource = _combatManagerService.Combatants;
 
-            InitiativeList.SelectedItem = currentSelected ?? CharacterList[0];
+            InitiativeList.SelectedItem = currentSelected ?? _combatManagerService.CurrentCharacter;
 
         }
 
@@ -425,7 +372,7 @@ namespace DnDCombatTracker
         /// <param name="e"></param>
         private void InitiativeList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var character = InitiativeList.SelectedValue as Character ?? (CharacterList.Count > 0 ? CharacterList[0] : null);
+            var character = InitiativeList.SelectedValue as Character ?? (_combatManagerService.Combatants.Count > 0 ? _combatManagerService.Combatants.First() : null);
 
             UpdateInfoTab(character);
         }
