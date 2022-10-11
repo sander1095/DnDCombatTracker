@@ -40,7 +40,9 @@ namespace CombatTracker
 
         public List<Conditions> Conditions { get; set; }
 
-        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions)
+        public bool ReactionUsed { get; set; }
+
+        public Character(string name, short initiative, short? maxHP, short? HP, short? tempHP, short fail, short success, List<Conditions> conditions, bool reacionUsed)
         {
             Name = name;
             Initiative = initiative;
@@ -50,6 +52,7 @@ namespace CombatTracker
             DeathSaves_Fail = fail;
             DeathSaves_Success = success;
             Conditions = conditions;
+            ReactionUsed = reacionUsed;
         }
 
         public override string ToString()
