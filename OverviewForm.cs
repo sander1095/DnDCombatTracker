@@ -64,6 +64,15 @@ namespace CombatTracker
             int currentIndex = CharacterList.IndexOf(currentCharacter);
             int indexToSet = currentIndex + 1 == CharacterList.Count ? 0 : currentIndex + 1; //Check if wrap around is needed
 
+            // Reset reaction for each character at a new turn
+            if(currentIndex + 1 >= CharacterList.Count)
+            {
+                foreach(Character character in CharacterList)
+                {
+                    character.ReactionUsed = false;
+                }
+            }
+
             Character newCharacter = CharacterList[indexToSet];
             Character newNextCharacter = CharacterList[indexToSet + 1 == CharacterList.Count ? 0 : indexToSet + 1];
 
@@ -348,8 +357,9 @@ namespace CombatTracker
 
                 short fails = (short)ListDeathSavesFail.Count(x => x.Checked);
                 short successes = (short)ListDeathSavesSuccess.Count(x => x.Checked);
+                bool reactionUsed = ReactionCheckbox.Checked;
 
-                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions);
+                Character character = new Character(name, initiative, maxHP, hp, tempHP, fails, successes, chosenConditions, reactionUsed);
 
                 //Update or insert the character
                 if (CharacterList.ToList().Exists(x => x.Name == name))
@@ -429,6 +439,7 @@ namespace CombatTracker
                 HPInput.Text = string.Empty;
                 MaxHPInput.Text = string.Empty;
                 TempHPInput.Text = string.Empty;
+                ReactionCheckbox.Checked = false;
 
                 for (int i = 0; i < ListDeathSavesFail.Length; i++)
                 {
@@ -502,6 +513,8 @@ namespace CombatTracker
                 {
                     item.Key.Checked = character.Conditions.Contains(item.Value);
                 }
+
+                ReactionCheckbox.Checked = character.ReactionUsed;
             }
         }
 
@@ -514,6 +527,8 @@ namespace CombatTracker
                 HPPlaceholderLabel.Text = string.Empty;
                 MaxHPPlaceholderLabel.Text = string.Empty;
                 TempHPPlaceholderLabel.Text = string.Empty;
+                ReactionCheckbox.Checked = false;
+                ReactionUsedDetailCheckbox.Checked = false;
                 //Checkboxes
                 for (int i = 0; i < DetailDeathSavesFail.Length; i++)
                 {
@@ -546,6 +561,9 @@ namespace CombatTracker
                     MaxHPPlaceholderLabel.Text = string.Empty;
                     TempHPPlaceholderLabel.Text = string.Empty;
                 }
+
+                ReactionCheckbox.Checked = character.ReactionUsed;
+                ReactionUsedDetailCheckbox.Checked = character.ReactionUsed;
 
                 //Checkboxes
                 for (int i = 0; i < DetailDeathSavesFail.Length; i++)
